@@ -1,5 +1,6 @@
-`nginx.conf` - example nginx setup with query-node, colossus and pioneer
-`docker-compose.yml` - `joystream-node` configuration for `docker-compose`
+Configuration
+- `nginx.conf` - example nginx setup with query-node, colossus and pioneer
+- `docker-compose.yml` - `joystream-node` configuration for `docker-compose`
 
 Start an example network:
 - Install `subkey` and `jq` (`./scripts/install-tools.sh`)
