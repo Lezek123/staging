@@ -1,0 +1,22 @@
+version: "3.4"
+services:
+  joystream-node:
+    image: joystream/node:latest
+    restart: always
+    container_name: joystream-node
+    volumes:
+      - ./chain:/chain
+    command: "\
+      --base-path /chain \
+      --chain /chain/spec.json \
+      --validator \
+      --unsafe-ws-external \
+      --rpc-cors all \
+      --log runtime \
+      --name staging-node \
+      --pruning=archive \
+      --no-telemetry"
+    ports:
+      - "9944:9944"
+      - "30333:30333"
+  # ...
